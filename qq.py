@@ -53,7 +53,7 @@ class Ui_Form:
     
     def text(self):
         global line
-        line=json.loads(urllib.request.urlopen('https://zy.xywlapi.cc/qqapi?qq='+self.lineEdit.text()).read().decode('utf-8'))
+        line=json.loads(urllib.request.urlopen('https://api.xywlapi.cc/qqapi?qq='+self.lineEdit.text()).read().decode('utf-8'))
         if line is not None:
             self.textEdit.setText(str(line.values()))
             line=None
